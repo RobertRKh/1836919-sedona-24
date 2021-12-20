@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <div class="wrapper">
@@ -10,21 +12,21 @@
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
-            <a class="page-header__logo">
+            <a class="page-header__logo" href="index.html">
               <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона.">
             </a> <!--Насчет расположения логотипа в разметке подумаю при написании стилей-->
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="index.html">Главная</a>
+                <a class="main-nav__link" href="index.html">Главная</a>
               </li>
               <li class="main-nav__item">
-                <a href="photo.html">Фото и видео</a>
-              </li>
-              <li class="main-nav__item main-nav__item--active">
-                <a>Форма отзыва</a>
+                <a class="main-nav__link" href="photo.html">Фото и видео</a>
               </li>
               <li class="main-nav__item">
-                <a href="https://htmlacademy.ru/">HTML Academy</a>
+                <a class="main-nav__link main-nav__item--current">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
               </li>
             </ul>
           </div>
@@ -33,7 +35,7 @@
       <main class="page-main">
         <section class="banner">
           <h1 class="visually-hidden">Страница для обратной связи о Седоне</h1>
-          <img class="banner__image" width="460" height="80" src="img/sedona.svg" alt="Седона.">
+          <img class="banner__image" width="229" height="39" src="img/sedona.svg" alt="Седона.">
         </section>
         <section class="intro">
           <h2 class="intro__title">Оставьте свой отзыв</h2>

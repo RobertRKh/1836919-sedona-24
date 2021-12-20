@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <div class="wrapper">
@@ -14,17 +16,17 @@
               <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона.">
             </a> <!--Насчет расположения логотипа в разметке подумаю при написании стилей-->
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a>Главная</a>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--current">Главная</a>
               </li>
               <li class="main-nav__item">
-                <a href="photo.html">Фото и видео</a>
+                <a class="main-nav__link" href="photo.html">Фото и видео</a>
               </li>
               <li class="main-nav__item">
-                <a href="form.html">Форма отзыва</a>
+                <a class="main-nav__link" href="form.html">Форма отзыва</a>
               </li>
               <li class="main-nav__item">
-                <a href="https://htmlacademy.ru/">HTML Academy</a>
+                <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
               </li>
             </ul>
           </div>
@@ -33,10 +35,10 @@
       <main class="page-main">
         <section class="banner">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-          <img class="banner__image" src="img/banner.svg" alt="Добро пожаловать в Седону.">
+          <img class="banner__image" width="282" height="214" src="img/banner.svg" alt="Добро пожаловать в Седону.">
         </section>
         <section class="intro">
-          <h2 class="intro__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <h2 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p class="intro__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </section>
         <section class="advantages">
@@ -44,32 +46,36 @@
           <ol class="advantages__list">
             <li class="advantages__inner-item">
               <div class="advantages__inner-wrapper">
-                <h3 class="advantages__title">Настоящий городок</h3>
-                <p class="advantages__count">№1</p>
-                <p class="advantages__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                <h3 class="advantages__title advantages__inner-title">Настоящий городок</h3>
+                <p class="advantages__count advantages__inner-count">№1</p>
+                <p class="advantages__description advantages__inner-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="advantages__image" src="img/photo-city@1x.jpg" width="800" height="256" alt="Седона — не аттракцион для туристов, там течёт своя жизнь.">
+              <div class="advantages__image-wrapper">
+                <img class="advantages__image" src="img/photo-city@1x.jpg" width="800" height="256" alt="Седона — не аттракцион для туристов, там течёт своя жизнь.">
+              </div>
               <ul class="features advantages__features">
                 <li class="features__item">
                   <h4 class="features__title features__title--digs">Жильё</h4>
                   <p class="features__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
                 <li class="features__item">
-                  <h4 class="features__title features__title--food">Еда</h4>
-                  <p class="features__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                  <h4 class="features__title features__title--souvenirs">Сувениры</h4>
+                  <p class="features__description">Не только китайского, но и местного производства!</p>
                 </li>
                 <li class="features__item">
-                  <h4 class="features__title features__title--souvenirs">Сувениры</h4>
-                  <p class="features__description">Не только китайского, но и настоящего местного производства!</p>
+                  <h4 class="features__title features__title--food">Еда</h4>
+                  <p class="features__description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
                 </li>
               </ul> <!--При стилизации внесу дополнительные обертки-->
             </li>
             <li class="advantages__inner-item">
-              <img class="advantages__image" src="img/photo-bridge@1x.jpg" width="800" height="256" alt="Да, по нему можно пройти! Если вы осмелитесь, разумеется.">
               <div class="advantages__inner-wrapper">
-                <h3 class="advantages__title">Там есть мост дьявола</h3>
-                <p class="advantages__count">№2</p>
-                <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                <h3 class="advantages__title advantages__inner-title">Там есть мост дьявола</h3>
+                <p class="advantages__count advantages__inner-count">№2</p>
+                <p class="advantages__description advantages__inner-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
+              <div class="advantages__image-wrapper">
+                <img class="advantages__image" src="img/photo-bridge@1x.jpg" width="800" height="256" alt="Да, по нему можно пройти! Если вы осмелитесь, разумеется.">
               </div>
             </li>
             <li class="advantages__item">
@@ -118,11 +124,11 @@
             </li>
           </ul>
         </div>
-        <div class="copyright page-footer__copyright">
+        <p class="copyright page-footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="copyright__text">Разработано:<span class="visually-hidden">HTML Academy</span></p>
+            Разработано:<span class="visually-hidden">HTML Academy</span>
           </a>
-        </div>
+        </p>
       </footer>
     </div>
   </body>
