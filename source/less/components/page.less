@@ -1,15 +1,18 @@
 .page {
   height: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: @font-family-base;
 }
 
 .page__body {
-  padding: 0;
   margin: 0 auto;
   height: 100%;
   min-width: @mobile-width;
   background-color: @color-bg-inner;
-  font-family: @font-family-base;
-  font-size: 14px;
-  line-height: 21px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: @desktop-width;
+  }
 }

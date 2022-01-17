@@ -1,0 +1,42 @@
+.like {
+  white-space: nowrap;
+}
+
+.like__button {
+  padding: 0;
+  margin: 0 11px 0 0;
+  border: none;
+  background-color: transparent;
+
+  path {
+    fill: @color-black;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 4px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    path {
+      fill: @color-white;
+      opacity: 1;
+    }
+  }
+}
+
+.like__count {
+  display: inline-block;
+  max-width: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @color-black;
+  vertical-align: bottom;
+
+  @media (min-width: @desktop-width) {
+    color: @color-white;
+  }
+}

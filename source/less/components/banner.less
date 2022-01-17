@@ -1,10 +1,43 @@
 .banner {
   margin: 0;
-  padding: 90px 20px 85px 20px;
+  padding: 90px 20px 79px 20px;
   text-align: center;
   background-color: @color-accent;
-  background-image: url("../img/intro-triangle.svg"), url("../img/intro@1.jpg");
-  background-size: 100%, cover;
+  background-image: url("../img/banner-triangle.svg"), url("../img/banner-mobile@1x.jpg");
+  background-size: auto, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/banner-triangle.svg"), url("../img/banner-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 78px 20px 85px 20px;
+    background-image: url("../img/banner-triangle.svg"), url("../img/banner-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/banner-triangle.svg"), url("../img/banner-desktop@2x.jpg");
+    }
+  }
+}
+
+.banner__image {
+  width: 282px;
+  height: 214px;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    height: 350px;
+  }
+}
+
+.banner__inner-image {
+  width: 229px;
+  height: 39px;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    height: 350px;
+  }
 }
