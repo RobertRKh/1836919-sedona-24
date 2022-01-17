@@ -1,7 +1,7 @@
 .button {
   margin: 0;
-  padding: 15px 32px;
-  display: block;
+  padding: 15px 47px;
+  display: inline-block;
   border: none;
   box-sizing: border-box;
   color: @color-white;
@@ -13,4 +13,18 @@
   font-weight: 700;
   cursor: pointer;
   background-color: @color-accent;
+
+  &:hover {
+    background-color: @color-bg-focus;
+  }
+
+  &:active {
+    background-color: @color-bg-active;
+    color: fade(@color-white, 30%);
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: @color-bg;
+  }
 }

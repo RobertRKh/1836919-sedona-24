@@ -1,1 +1,225 @@
-//test
+.main-nav {
+  position: relative;
+}
+
+.main-nav__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-height: 56px;
+    position: static;
+    align-items: center;
+  }
+}
+
+.main-nav__item {
+  border-top: 1px solid rgb(154, 194, 219);
+  border-bottom: 1px solid rgb(103, 143, 168);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    position: relative;
+    border-bottom: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px 0 20px;
+    border: none;
+    width: 20%;
+    box-sizing: border-box;
+
+    &:nth-of-type(4n + 2) {
+      margin-right: 20%;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-nav__item a[href] {
+  &:hover {
+    background-color: @color-bg-focus;
+  }
+
+  &:active {
+    color: fade(@color-white, 30%);
+    background-color: @color-bg-active;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: @color-accent;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: fade(@color-black, 30%);
+      background-color: transparent;
+    }
+  }
+}
+
+.main-nav__link {
+  margin: 0;
+  padding: 10px 0 10px 0;
+  display: block;
+  box-sizing: border-box;
+  background-color: @color-accent;
+  color: @color-white;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 26px;
+    color: @color-black;
+    background-color: transparent;
+  }
+}
+
+.main-nav__link--current {
+  background-color: @color-bg-focus;
+
+  @media (min-width: @tablet-width) {
+    color: @color-text-current;
+    background-color: transparent;
+  }
+}
+
+.main-nav__toggle {
+  padding: 20px;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 57px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle-lines,
+.main-nav--closed .main-nav__toggle-lines::before,
+.main-nav--closed .main-nav__toggle-lines::after,
+.main-nav--opened .main-nav__toggle-lines::before,
+.main-nav--opened .main-nav__toggle-lines::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 23px;
+  height: 4px;
+  background-color: @color-accent;
+}
+
+.main-nav--closed .main-nav__toggle-lines:hover,
+.main-nav--closed .main-nav__toggle-lines:hover::before,
+.main-nav--closed .main-nav__toggle-lines:hover::after {
+  background-color: @color-accent-hover;
+}
+
+.main-nav--closed .main-nav__toggle-lines:active,
+.main-nav--closed .main-nav__toggle-lines:active::before,
+.main-nav--closed .main-nav__toggle-lines:active::after {
+  background-color: @color-accent-active;
+}
+
+.main-nav--closed .main-nav__toggle-lines::after {
+  top: 8px;
+  left: 0;
+}
+
+.main-nav--closed .main-nav__toggle-lines::before {
+  top: 16px;
+  left: 0;
+}
+
+.main-nav--opened .main-nav__toggle-lines::before,
+.main-nav--opened .main-nav__toggle-lines::after {
+  background-color: @color-white;
+}
+
+.main-nav--opened .main-nav__toggle:hover .main-nav__toggle-lines::before,
+.main-nav--opened .main-nav__toggle:hover .main-nav__toggle-lines::after {
+  background-color: @color-white-hover;
+}
+
+.main-nav--opened .main-nav__toggle:active .main-nav__toggle-lines::before,
+.main-nav--opened .main-nav__toggle:active .main-nav__toggle-lines::after {
+  background-color: @color-white-active;
+}
+
+.main-nav--opened .main-nav__toggle-lines {
+  background-color: transparent;
+}
+
+.main-nav--opened .main-nav__toggle-lines::after {
+  top: 28px;
+  transform: rotate(45deg);
+}
+
+.main-nav--opened .main-nav__toggle-lines::before {
+  top: 28px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+  }
+}

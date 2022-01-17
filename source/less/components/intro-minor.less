@@ -1,0 +1,44 @@
+.intro-minor {
+  margin: 25px 20px 39px;
+  padding: 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 59px 100px 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 96px 100px 84px;
+  }
+}
+
+.intro-minor__title {
+  margin: 0 5px 28px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 5px 33px;
+    font-size: 30px;
+  }
+}
+
+.intro-minor__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: @color-text-accent;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: block;
+    }
+  }
+}
