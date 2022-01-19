@@ -1,5 +1,5 @@
 .video {
-  padding: 36px 0 30px;
+  padding: 36px 0 105px;
 }
 
 .video__wrapper {
@@ -40,13 +40,32 @@
   object-fit: cover;
 }
 
-.video__progress-wrapper {
+.video__controls {
+  padding: 0 23px 0 25px;
   position: absolute;
-  bottom: 0;
+  bottom: -66px;
   left: 20px;
   right: 20px;
+  height: 66px;
+  background-color: @color-bg-inner;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video__button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video__progress-wrapper {
+  position: absolute;
+  bottom: 66px;
+  left: 0;
+  right: 0;
   height: 45px;
-  transform: translateY(-47%);
   background-color: fade(@color-black, 60%);
   cursor: pointer;
 }
@@ -62,14 +81,19 @@
 }
 
 .video__current {
-  padding: 0;
-  margin: 0;
   position: absolute;
   top: -3px;
   left: 37px;
   border-radius: 50%;
-  border: none;
   width: 9px;
   height: 9px;
   background-color: @color-white;
+}
+
+.video__subtitles {
+  margin-left: auto;
+}
+
+.video__fullscreen {
+  padding-left: 30px;
 }
