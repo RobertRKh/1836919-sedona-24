@@ -4,16 +4,21 @@
   text-align: center;
   background-color: @color-accent;
   background-image: url("../img/banner-triangle.svg"), url("../img/banner-mobile@1x.jpg");
-  background-size: auto, auto;
+  background-size: auto, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center bottom;
 
   &--minor {
     padding: 52px 20px 61px 20px;
+    background-size: auto, auto;
   }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/banner-triangle.svg"), url("../img/banner-mobile@2x.jpg");
+
+    &--minor {
+      background-size: auto, 902px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -26,6 +31,10 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/banner-triangle.svg"), url("../img/banner-desktop@2x.jpg");
+
+      &--minor {
+        background-size: auto, 1200px;
+      }
     }
   }
 
