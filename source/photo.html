@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon-icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <div class="wrapper">
@@ -38,13 +42,13 @@
         </nav>
       </header>
       <main class="page-main">
-        <section class="banner-minor">
+        <section class="banner banner--minor">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-          <img class="banner-minor__inner-image" width="229" height="39" src="img/banner-minor.svg" alt="Добро пожаловать в Седону.">
+          <img class="banner__image banner__image--minor" width="229" height="39" src="img/banner-minor.svg" alt="Добро пожаловать в Седону.">
         </section>
-        <section class="intro-minor">
-          <h2 class="intro-minor__title">Фото и видео</h2>
-          <p class="intro-minor__description">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике.</p>
+        <section class="intro intro--minor">
+          <h2 class="intro__title intro__title--minor">Фото и видео</h2>
+          <p class="intro__description intro__description--minor">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике.</p>
         </section>
 
         <section class="catalog-image">
@@ -233,21 +237,6 @@
         </p>
       </footer>
     </div>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

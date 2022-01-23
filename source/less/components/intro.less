@@ -1,26 +1,59 @@
 .intro {
-  margin: 35px 20px 15px;
+  margin: 35px 20px 12px;
   padding: 0;
   text-align: center;
 
+  &--minor {
+    margin: 25px 20px 39px;
+  }
+
+  &--minor-form {
+    margin: 37px 20px 16px;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 44px 100px 55px;
+
+    &--minor {
+      margin: 59px 100px 82px;
+    }
+
+    &--minor-form {
+      margin: 62px 100px 55px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 55px 100px 44px;
+
+    &--minor {
+      margin: 96px 100px 84px;
+    }
+
+    &--minor-form {
+      margin: 113px 100px 55px;
+    }
   }
 }
 
 .intro__title {
-  margin: 0 5px 30px 5px;
+  margin: 0 5px 30px;
   padding: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 
+  &--minor {
+    margin: 0 5px 28px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 21px;
+
+    &--minor {
+      margin: 0 5px 33px;
+      font-size: 30px;
+    }
   }
 }
 
@@ -28,6 +61,22 @@
   padding: 0;
   margin: 0;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 26px;
   color: @color-text-accent;
+
+  &--minor {
+    line-height: 24px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--minor {
+      br {
+        display: block;
+      }
+    }
+  }
 }
