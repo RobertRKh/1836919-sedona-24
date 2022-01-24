@@ -11,7 +11,7 @@
   cursor: pointer;
 
   path {
-    fill: fade(@color-black, 30%);
+    fill: rgba(0, 0, 0, 0.3);
   }
 
   @media (min-width: @tablet-width) {
@@ -24,11 +24,11 @@
     }
 
     &:hover path {
-      fill: fade(@color-white, 60%);
+      fill: rgba(255, 255, 255, 0.6);
     }
 
     &:active path {
-      fill: fade(@color-white, 30%);
+      fill: rgba(255, 255, 255, 0.3);
     }
   }
 }

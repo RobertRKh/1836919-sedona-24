@@ -12,7 +12,7 @@
     height: 37px;
     width: 100%;
     margin: 0;
-    background-image: url("../img/intro-triangle.svg");
+    background-image: url("../img/icons/intro-triangle.svg");
     background-size: 100% 37px;
     background-repeat: no-repeat;
   }
@@ -70,22 +70,6 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-  }
-}
-
-.advantages__inform-wrapper {
-  margin: 0;
-  padding: 40px 20px 40px;
-
-  @media (min-width: @tablet-width) {
-    padding: 40px 26px 43px;
-    width: 33.33%;
-    box-sizing: border-box;
-    flex-grow: 1;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 49px 53px 56px;
   }
 }
 
@@ -185,5 +169,29 @@
 
   @media (min-width: @desktop-width) {
     padding: 43px 39px 62px;
+  }
+}
+
+.advantages__inform-wrapper {
+  margin: 0;
+  padding: 40px 20px 40px;
+
+  &:nth-of-type(n + 6):nth-child(even) {
+    background-color: @color-bg;
+  }
+
+  &:nth-of-type(n + 6):nth-child(odd) {
+    background-color: @color-white-hover;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 26px 43px;
+    width: 33.33%;
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 49px 53px 56px;
   }
 }
