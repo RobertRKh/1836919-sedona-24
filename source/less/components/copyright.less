@@ -8,18 +8,19 @@
   text-decoration: none;
   vertical-align: middle;
 
-  &:hover path {
+  &:hover .copyright__logo-academy {
     fill: @color-accent;
   }
 
-  &:active path {
-    fill: fade(@color-black, 30%);
+  &:active .copyright__logo-academy {
+    fill: rgba(0, 0, 0, 0.3);
   }
+}
 
-  svg {
-    margin-left: 9px;
-    width: 27px;
-    height: 34px;
-    vertical-align: middle;
-  }
+.copyright__logo-academy {
+  margin-left: 9px;
+  width: 27px;
+  height: 34px;
+  vertical-align: middle;
+  fill: @color-black;
 }

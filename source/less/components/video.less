@@ -35,23 +35,32 @@
 }
 
 .video__description {
-  padding: 0 10px 33px;
+  padding: 0 10px;
   margin: 0;
   font-size: 14px;
   line-height: 24px;
   color: @color-text-accent;
 
   @media (min-width: @tablet-width) {
-    padding: 0 74px 79px;
+    padding: 0 74px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 150px 77px;
+    padding: 0 150px;
   }
 }
 
 .video__player {
   position: relative;
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 77px;
+  }
 }
 
 .video__screen {
@@ -93,7 +102,7 @@
     right: 0;
     height: 93px;
     align-items: center;
-    background-color: fade(@color-black, 60%);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -109,7 +118,7 @@
   }
 
   &:active path {
-    fill: fade(@color-text-accent, 30%);
+    fill: rgba(118, 99, 87, 0.3);
   }
 
   @media (min-width: @tablet-width) {
@@ -118,11 +127,11 @@
     }
 
     &:hover path {
-      fill: fade(@color-white, 60%);
+      fill: rgba(255, 255, 255, 0.6);
     }
 
     &:active path {
-      fill: fade(@color-white, 30%);
+      fill: rgba(255, 255, 255, 0.3);
     }
   }
 }
@@ -133,7 +142,7 @@
   left: 0;
   right: 0;
   height: 45px;
-  background-color: fade(@color-black, 60%);
+  background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -155,7 +164,7 @@
   right: 22px;
   height: 3px;
   transform: translateY(-50%);
-  background-color: fade(@color-white, 20%);
+  background-color: rgba(255, 255, 255, 0.6);
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -195,6 +204,6 @@
   margin-left: 30px;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    margin-left: 3px;
   }
 }
