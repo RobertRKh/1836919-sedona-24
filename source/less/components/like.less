@@ -10,7 +10,7 @@
   background-color: transparent;
   cursor: pointer;
 
-  path {
+  svg {
     fill: rgba(0, 0, 0, 0.3);
   }
 
@@ -19,15 +19,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    path {
+    svg {
       fill: @color-white;
     }
 
-    &:hover path {
+    &:hover svg {
       fill: rgba(255, 255, 255, 0.6);
     }
 
-    &:active path {
+    &:active svg {
       fill: rgba(255, 255, 255, 0.3);
     }
   }
