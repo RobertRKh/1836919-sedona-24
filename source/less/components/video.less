@@ -113,24 +113,28 @@
   background-color: transparent;
   cursor: pointer;
 
-  &:hover path {
+  & svg {
+    fill: @color-white;
+  }
+
+  &:hover svg {
     fill: @color-text-accent;
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba(118, 99, 87, 0.3);
   }
 
   @media (min-width: @tablet-width) {
-    path {
+    & svg {
       fill: @color-white;
     }
 
-    &:hover path {
+    &:hover svg {
       fill: rgba(255, 255, 255, 0.6);
     }
 
-    &:active path {
+    &:active svg {
       fill: rgba(255, 255, 255, 0.3);
     }
   }
