@@ -15,14 +15,14 @@
   <body class="page__body">
     <div class="wrapper">
       <header class="page-header">
-        <a class="logo main-nav__logo">
+        <a class="logo page-header__logo page-header__logo--no-js" href="index.html">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-            <img src="img/logotype-mobile.svg" width="187" height="96" alt="Логотип города Седона.">
+            <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип города Седона.">
           </picture>
         </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -76,7 +76,7 @@
             <legend class="feedback-form__legend feedback-form__contacts-legend">Контактная информация:</legend>
             <ul class="feedback-form__list feedback-form__contacts-list">
               <li class="feedback-form__item feedback-form__contacts-item">
-                <label class="feedback-form__label feedback-form__contacts-label" for="phone"><span class="feedback-form__contacts--desktope">Контактный</span> телефон*:</label>
+                <label class="feedback-form__label feedback-form__contacts-label" for="phone"><span class="feedback-form__contacts-label-span">Контактный</span> телефон*:</label>
                 <div class="feedback-form__contacts-wrap">
                   <input class="feedback-form__input feedback-form__contacts-input" id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
                   <span class="feedback-form__contacts-span">
@@ -214,18 +214,18 @@
       </footer>
 
       <!-- Для включения модальных окон, убрать --closed -->
-      <div class="modal-form modal-form__fail--closed">
+      <div class="modal-form modal-form--fail-closed">
         <h2 class="modal-form__title">Что-то пошло не так!</h2>
         <p class="modal-form__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="button modal-form__button" type="button">Ок</button>
       </div>
 
-      <div class="modal-form modal-form__success--closed">
+      <div class="modal-form modal-form--success-closed">
         <div class="modal-form__wrapper">
           <h2 class="modal-form__title modal-form__success-title">Ваш отзыв отправлен!</h2>
           <p class="modal-form__description modal-form__success-description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
-        <div class="modal-form_wrapper-button">
+        <div class="modal-form__wrapper-button">
           <button class="button modal-form__success-button" type="button">Закрыть окно</button>
         </div>
       </div>
